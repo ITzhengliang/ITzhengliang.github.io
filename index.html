@@ -280,6 +280,87 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-无标题markdown" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/05/16/无标题markdown/" class="article-date">
+      <time datetime="2018-05-16T15:16:29.619Z" itemprop="datePublished">2018-05-16</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/05/16/无标题markdown/">cocos creator 强大的audioEngine API</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>　　简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档）</p>
+<h2 id="播放音频"><a href="#播放音频" class="headerlink" title="播放音频"></a>播放音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0</span><br></pre></td></tr></table></figure>
+<h2 id="设置音频是否循环"><a href="#设置音频是否循环" class="headerlink" title="设置音频是否循环"></a>设置音频是否循环</h2><p>　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setLoop(id, loop);   //id代表由play获得的id，loop代表是否循环,</span><br></pre></td></tr></table></figure></p>
+<h2 id="获取音频的循环状态"><a href="#获取音频的循环状态" class="headerlink" title="获取音频的循环状态"></a>获取音频的循环状态</h2><p>　　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.isLoop(id);   //id代表由play获得的id</span><br></pre></td></tr></table></figure></p>
+<h2 id="设置音量（0-0-1-0）"><a href="#设置音量（0-0-1-0）" class="headerlink" title="设置音量（0.0 ~ 1.0）"></a>设置音量（0.0 ~ 1.0）</h2><p>　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setVolume(id, volume);   //id代表由play获得的id, volume代表音量范围0~1.0</span><br></pre></td></tr></table></figure></p>
+<h2 id="获取音量（0-0-1-0）"><a href="#获取音量（0-0-1-0）" class="headerlink" title="获取音量（0.0 ~ 1.0）"></a>获取音量（0.0 ~ 1.0）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var volume = cc.audioEngine.getVolume(id);    //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="设置当前的音频时间"><a href="#设置当前的音频时间" class="headerlink" title="设置当前的音频时间"></a>设置当前的音频时间</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setCurrentTime(id, time);    //id代表由play获得的id，time代表播放的当前位置（单位为秒）</span><br></pre></td></tr></table></figure>
+<h2 id="获取当前的音频播放时间"><a href="#获取当前的音频播放时间" class="headerlink" title="获取当前的音频播放时间"></a>获取当前的音频播放时间</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var time = cc.audioEngine.getCurrentTime(id);   //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="获取音频总时长"><a href="#获取音频总时长" class="headerlink" title="获取音频总时长"></a>获取音频总时长</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var time = cc.audioEngine.getDuration(id);    //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="获取音频状态"><a href="#获取音频状态" class="headerlink" title="获取音频状态"></a>获取音频状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var state = cc.audioEngine.getState(id);      //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="设置一个音频结束后的回调"><a href="#设置一个音频结束后的回调" class="headerlink" title="设置一个音频结束后的回调"></a>设置一个音频结束后的回调</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setFinishCallback(id, function () &#123;&#125;);     //id代表由play获得的id，第二个参数是自己的回调哦</span><br></pre></td></tr></table></figure>
+<h2 id="暂停正在播放音频"><a href="#暂停正在播放音频" class="headerlink" title="暂停正在播放音频"></a>暂停正在播放音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.pause(id);      //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="暂停现在正在播放的所有音频"><a href="#暂停现在正在播放的所有音频" class="headerlink" title="暂停现在正在播放的所有音频"></a>暂停现在正在播放的所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.pauseAll();</span><br></pre></td></tr></table></figure>
+<h2 id="恢复播放指定的音频"><a href="#恢复播放指定的音频" class="headerlink" title="恢复播放指定的音频"></a>恢复播放指定的音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.resume(id);     //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="恢复播放所有之前暂停的所有音频"><a href="#恢复播放所有之前暂停的所有音频" class="headerlink" title="恢复播放所有之前暂停的所有音频"></a>恢复播放所有之前暂停的所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.resumeAll();</span><br></pre></td></tr></table></figure>
+<h2 id="停止播放指定音频"><a href="#停止播放指定音频" class="headerlink" title="停止播放指定音频"></a>停止播放指定音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.stop(id);     //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="停止正在播放的所有音频"><a href="#停止正在播放的所有音频" class="headerlink" title="停止正在播放的所有音频"></a>停止正在播放的所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.stopAll();</span><br></pre></td></tr></table></figure>
+<h2 id="设置音频实例"><a href="#设置音频实例" class="headerlink" title="设置音频实例"></a>设置音频实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setMaxAudioInstance(num);      //num是一个音频设置几个实例</span><br></pre></td></tr></table></figure>
+<h2 id="获取一个音频可以设置几个实例"><a href="#获取一个音频可以设置几个实例" class="headerlink" title="获取一个音频可以设置几个实例"></a>获取一个音频可以设置几个实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.getMaxAudioInstance();</span><br></pre></td></tr></table></figure>
+<h2 id="预加载一个音频"><a href="#预加载一个音频" class="headerlink" title="预加载一个音频"></a>预加载一个音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.preload(path);     //path代表音频路径</span><br></pre></td></tr></table></figure>
+<h2 id="卸载预加载的音频"><a href="#卸载预加载的音频" class="headerlink" title="卸载预加载的音频"></a>卸载预加载的音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.uncache(path);     //path代表音频路径</span><br></pre></td></tr></table></figure>
+<h2 id="卸载所有音频"><a href="#卸载所有音频" class="headerlink" title="卸载所有音频"></a>卸载所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.uncacheAll();</span><br></pre></td></tr></table></figure>
+<h2 id="设置尺寸"><a href="#设置尺寸" class="headerlink" title="设置尺寸"></a>设置尺寸</h2><p>　　设置一个以 KB 为单位的尺寸，大于这个尺寸的音频在加载的时候会强制使用 dom 方式加载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setMaxWebAudioSize(size);      //size为要设置的尺寸</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-cocos creator 强大的audioEngine API" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

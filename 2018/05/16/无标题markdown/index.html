@@ -7,36 +7,19 @@
   
   
   
-  <title>first：搭建一个自己域名的博客（hexo+github） | 唯一的信仰</title>
+  <title>cocos creator 强大的audioEngine API | 唯一的信仰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="–我的流程，仅供参考 域名问题域名购买　　我是在阿里云上购买的域名，搜自己喜欢，且后续成本相对划算的 控制台设置　　12步无所谓先后，实名认证什么的先不搞不影响购买，购买的时候会提醒你创建。   　　创建购买好后，控制台各种资料，实名认证一搞。控制台左边选择域名，就可以看见你买的域名了。    GitHub操作注册　　在GitHub注册一个自己的账号 创建仓库　　注意：如果你的用户名是yourna">
+  <meta name="description" content="简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档） 播放音频1var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0 设置音频是否循环　1cc.audioE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first：搭建一个自己域名的博客（hexo+github）">
-<meta property="og:url" content="http://zhengliang1214.top/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/index.html">
+<meta property="og:title" content="cocos creator 强大的audioEngine API">
+<meta property="og:url" content="http://zhengliang1214.top/2018/05/16/无标题markdown/index.html">
 <meta property="og:site_name" content="唯一的信仰">
-<meta property="og:description" content="–我的流程，仅供参考 域名问题域名购买　　我是在阿里云上购买的域名，搜自己喜欢，且后续成本相对划算的 控制台设置　　12步无所谓先后，实名认证什么的先不搞不影响购买，购买的时候会提醒你创建。   　　创建购买好后，控制台各种资料，实名认证一搞。控制台左边选择域名，就可以看见你买的域名了。    GitHub操作注册　　在GitHub注册一个自己的账号 创建仓库　　注意：如果你的用户名是yourna">
+<meta property="og:description" content="简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档） 播放音频1var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0 设置音频是否循环　1cc.audioE">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/E5A9659275804404B93025F6756AA789?method=download&shareKey=277529ae0a30e170be73d0a0a34b7d3f">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/CC0C6DC082EE414EA94C70E64944F9F0?method=download&shareKey=fa76ffad63898e0fc9b02bc37c1af868">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/B2812AE35BFB479FA08A1D303949D6AD?method=download&shareKey=a98326f52ca243cf3f9df0971d5e29b9">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/EEAC1CF60E894BEEA1BA8E90D7B8040A?method=download&shareKey=7fcd2d440736eb2b6ba4b9b3db2e3228">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/DE5F5FF794B345BBBC5E6E9C04D7DF66?method=download&shareKey=cbeaba844029ba22d9cf985ee1a3c96f">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/C43F65396E5741918AEA2CC423B53135?method=download&shareKey=43b535a0faed29107cd474755c14e704">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/0ADA0CF9A066494589F899AE897BDB09?method=download&shareKey=12d8907ebe38a1e89080a20986fefc82">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/35448E06883F4F668014DADAE7AEBEA9?method=download&shareKey=8666d73cd7cee81f725375c924c3ae31">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/32485E84D8114C08AA695717B5AAF6DA?method=download&shareKey=b3798d14378d9c0db1b41a64b4960baa">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/C198365A47604803A770738C48DD0223?method=download&shareKey=b1e7a0d470f60ed082446d8467575e80">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/DB89895C5A774373BF7A1EBF7ED9BD22?method=download&shareKey=d80b971cccc0b0fbb7aff7916cfaf083">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/12879EFB0C6E46468D267ADA1FF8FBE8?method=download&shareKey=50bd24b820efce8fb1d76c09d4c3629f">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/098AA5CCB2704DDD8518959421022D78?method=download&shareKey=7b391036ecc6ec7e47e0c25a5fe56ceb">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/22614B6055324AE9940928EA94970958?method=download&shareKey=6e6f657eecc70a3ffd264d0545b9c6c0">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/1900FDB9EED347E7A5FDC0211EDAC30B?method=download&shareKey=c113c83e3e3d82220c80aa0dabbc43e9">
-<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/58B25737090C4689BDBEFE714CF8E69A?method=download&shareKey=7d1efb595f6355ea62dba978ca6544dc">
-<meta property="og:updated_time" content="2018-05-06T16:36:45.252Z">
+<meta property="og:updated_time" content="2018-05-16T15:11:49.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="first：搭建一个自己域名的博客（hexo+github）">
-<meta name="twitter:description" content="–我的流程，仅供参考 域名问题域名购买　　我是在阿里云上购买的域名，搜自己喜欢，且后续成本相对划算的 控制台设置　　12步无所谓先后，实名认证什么的先不搞不影响购买，购买的时候会提醒你创建。   　　创建购买好后，控制台各种资料，实名认证一搞。控制台左边选择域名，就可以看见你买的域名了。    GitHub操作注册　　在GitHub注册一个自己的账号 创建仓库　　注意：如果你的用户名是yourna">
-<meta name="twitter:image" content="https://note.youdao.com/yws/api/personal/file/E5A9659275804404B93025F6756AA789?method=download&shareKey=277529ae0a30e170be73d0a0a34b7d3f">
+<meta name="twitter:title" content="cocos creator 强大的audioEngine API">
+<meta name="twitter:description" content="简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档） 播放音频1var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0 设置音频是否循环　1cc.audioE">
   
     <link rel="alternative" href="/atom.xml" title="唯一的信仰" type="application/atom+xml">
   
@@ -293,11 +276,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-first：搭建一个自己域名的博客（hexo+github）" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-无标题markdown" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/" class="article-date">
-      <time datetime="2018-05-06T03:31:16.358Z" itemprop="datePublished">2018-05-06</time>
+      <a  href="/2018/05/16/无标题markdown/" class="article-date">
+      <time datetime="2018-05-16T15:16:29.619Z" itemprop="datePublished">2018-05-16</time>
 </a>
 
     </div>
@@ -311,7 +294,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      first：搭建一个自己域名的博客（hexo+github）
+      cocos creator 强大的audioEngine API
     </h1>
   
 
@@ -329,41 +312,30 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>–我的流程，仅供参考</p>
-<h2 id="域名问题"><a href="#域名问题" class="headerlink" title="域名问题"></a>域名问题</h2><h3 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h3><p>　　我是在<a href="https://wanwang.aliyun.com/?spm=5176.8142029.735711.62.7e336d3eExsYn8" target="_blank" rel="noopener">阿里云</a>上购买的域名，搜自己喜欢，且后续成本相对划算的</p>
-<h3 id="控制台设置"><a href="#控制台设置" class="headerlink" title="控制台设置"></a>控制台设置</h3><p><img src="https://note.youdao.com/yws/api/personal/file/E5A9659275804404B93025F6756AA789?method=download&amp;shareKey=277529ae0a30e170be73d0a0a34b7d3f" alt="image"><br>　　12步无所谓先后，实名认证什么的先不搞不影响购买，购买的时候会提醒你创建。  </p>
-<p>　　创建购买好后，控制台各种资料，实名认证一搞。控制台左边选择域名，就可以看见你买的域名了。<br><img src="https://note.youdao.com/yws/api/personal/file/CC0C6DC082EE414EA94C70E64944F9F0?method=download&amp;shareKey=fa76ffad63898e0fc9b02bc37c1af868" alt="image">  </p>
-<hr>
-<h2 id="GitHub操作"><a href="#GitHub操作" class="headerlink" title="GitHub操作"></a>GitHub操作</h2><h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><p>　　在<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>注册一个自己的账号<br><img src="https://note.youdao.com/yws/api/personal/file/B2812AE35BFB479FA08A1D303949D6AD?method=download&amp;shareKey=a98326f52ca243cf3f9df0971d5e29b9" alt="image"></p>
-<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>　　注意：如果你的用户名是yourname，那repository name就要填yourname.github.io。<br><img src="https://note.youdao.com/yws/api/personal/file/EEAC1CF60E894BEEA1BA8E90D7B8040A?method=download&amp;shareKey=7fcd2d440736eb2b6ba4b9b3db2e3228" alt="image"><br>　　这里就是刚建好的仓库<br><img src="https://note.youdao.com/yws/api/personal/file/DE5F5FF794B345BBBC5E6E9C04D7DF66?method=download&amp;shareKey=cbeaba844029ba22d9cf985ee1a3c96f" alt="image"></p>
-<hr>
-<h2 id="Git-Bash"><a href="#Git-Bash" class="headerlink" title="Git Bash"></a>Git Bash</h2><p>　　安装<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git Bash</a>，一路next安装完。</p>
-<h2 id=""><a href="#" class="headerlink" title="　　"></a>　　</h2><h2 id="NodeJs"><a href="#NodeJs" class="headerlink" title="NodeJs"></a>NodeJs</h2><p>　　安装<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">NodeJs</a>，因为我是用的Hexo博客框架，基于NodeJs环境的静态博客，很多npm工具可以用。<br>　　一路安装，在Custom Setup这步选择 add to path，省的自己再去配环境变量。　　<br>　　Win+r 输入cmd<br><img src="https://note.youdao.com/yws/api/personal/file/C43F65396E5741918AEA2CC423B53135?method=download&amp;shareKey=43b535a0faed29107cd474755c14e704" alt="image"><br>　　输入node按回车，这种情况说明OK了<br><img src="https://note.youdao.com/yws/api/personal/file/0ADA0CF9A066494589F899AE897BDB09?method=download&amp;shareKey=12d8907ebe38a1e89080a20986fefc82" alt="image"></p>
-<hr>
-<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="文件夹"><a href="#文件夹" class="headerlink" title="文件夹"></a>文件夹</h3><p>　　先新建一个文件夹，以后存放所有博客的东西。  </p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>　　打开git bash，cd进入到刚新建的文件夹下<br><img src="https://note.youdao.com/yws/api/personal/file/35448E06883F4F668014DADAE7AEBEA9?method=download&amp;shareKey=8666d73cd7cee81f725375c924c3ae31" alt="image"><br>　　输入命令安装hexo。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g hexo</span><br></pre></td></tr></table></figure>
-<p>　　这里提示一个坑点，这种情况是nodejs问题，我把nodejs卸载后重新安装了一下nodejs，然后重新安装hexo。<br><img src="https://note.youdao.com/yws/api/personal/file/32485E84D8114C08AA695717B5AAF6DA?method=download&amp;shareKey=b3798d14378d9c0db1b41a64b4960baa" alt="image"><br><img src="https://note.youdao.com/yws/api/personal/file/C198365A47604803A770738C48DD0223?method=download&amp;shareKey=b1e7a0d470f60ed082446d8467575e80" alt="image"><br>　　输入命令查看，出现这就安装成功了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://note.youdao.com/yws/api/personal/file/DB89895C5A774373BF7A1EBF7ED9BD22?method=download&amp;shareKey=d80b971cccc0b0fbb7aff7916cfaf083" alt="image"></p>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>　　输入命令进行初始化</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p><img src="https://note.youdao.com/yws/api/personal/file/12879EFB0C6E46468D267ADA1FF8FBE8?method=download&amp;shareKey=50bd24b820efce8fb1d76c09d4c3629f" alt="image"><br>　　初始化完成后，刚新建的文件夹里会出现很多文件。<br><img src="https://note.youdao.com/yws/api/personal/file/098AA5CCB2704DDD8518959421022D78?method=download&amp;shareKey=7b391036ecc6ec7e47e0c25a5fe56ceb" alt="image"><br>　　这里解释一下：</p>
-<ul>
-<li>　　onode_modules：是依赖包</li>
-<li>　　opublic：存放的是生成的页面</li>
-<li>　　oscaffolds：命令生成文章等的模板</li>
-<li>　　osource：用命令创建的各种文章</li>
-<li>　　othemes：主题</li>
-<li>　　o_config.yml：整个博客的配置</li>
-<li>　　odb.json：source解析所得到的</li>
-<li>　　opackage.json：项目所需模块项目的配置信息<br>　　然后在同样命令行中输入命令生成静态页面</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<p><img src="https://note.youdao.com/yws/api/personal/file/22614B6055324AE9940928EA94970958?method=download&amp;shareKey=6e6f657eecc70a3ffd264d0545b9c6c0" alt="image"><br>　　再输入命令开启web服务<br>　　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://note.youdao.com/yws/api/personal/file/1900FDB9EED347E7A5FDC0211EDAC30B?method=download&amp;shareKey=c113c83e3e3d82220c80aa0dabbc43e9" alt="image"><br>　　然后打开<a href="http://localhost:4000/，就可以看到刚生成的页面了。" target="_blank" rel="noopener">http://localhost:4000/，就可以看到刚生成的页面了。</a><br><img src="https://note.youdao.com/yws/api/personal/file/58B25737090C4689BDBEFE714CF8E69A?method=download&amp;shareKey=7d1efb595f6355ea62dba978ca6544dc" alt="image"></p>
+        <p>　　简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档）</p>
+<h2 id="播放音频"><a href="#播放音频" class="headerlink" title="播放音频"></a>播放音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0</span><br></pre></td></tr></table></figure>
+<h2 id="设置音频是否循环"><a href="#设置音频是否循环" class="headerlink" title="设置音频是否循环"></a>设置音频是否循环</h2><p>　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setLoop(id, loop);   //id代表由play获得的id，loop代表是否循环,</span><br></pre></td></tr></table></figure></p>
+<h2 id="获取音频的循环状态"><a href="#获取音频的循环状态" class="headerlink" title="获取音频的循环状态"></a>获取音频的循环状态</h2><p>　　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.isLoop(id);   //id代表由play获得的id</span><br></pre></td></tr></table></figure></p>
+<h2 id="设置音量（0-0-1-0）"><a href="#设置音量（0-0-1-0）" class="headerlink" title="设置音量（0.0 ~ 1.0）"></a>设置音量（0.0 ~ 1.0）</h2><p>　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setVolume(id, volume);   //id代表由play获得的id, volume代表音量范围0~1.0</span><br></pre></td></tr></table></figure></p>
+<h2 id="获取音量（0-0-1-0）"><a href="#获取音量（0-0-1-0）" class="headerlink" title="获取音量（0.0 ~ 1.0）"></a>获取音量（0.0 ~ 1.0）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var volume = cc.audioEngine.getVolume(id);    //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="设置当前的音频时间"><a href="#设置当前的音频时间" class="headerlink" title="设置当前的音频时间"></a>设置当前的音频时间</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setCurrentTime(id, time);    //id代表由play获得的id，time代表播放的当前位置（单位为秒）</span><br></pre></td></tr></table></figure>
+<h2 id="获取当前的音频播放时间"><a href="#获取当前的音频播放时间" class="headerlink" title="获取当前的音频播放时间"></a>获取当前的音频播放时间</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var time = cc.audioEngine.getCurrentTime(id);   //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="获取音频总时长"><a href="#获取音频总时长" class="headerlink" title="获取音频总时长"></a>获取音频总时长</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var time = cc.audioEngine.getDuration(id);    //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="获取音频状态"><a href="#获取音频状态" class="headerlink" title="获取音频状态"></a>获取音频状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var state = cc.audioEngine.getState(id);      //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="设置一个音频结束后的回调"><a href="#设置一个音频结束后的回调" class="headerlink" title="设置一个音频结束后的回调"></a>设置一个音频结束后的回调</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setFinishCallback(id, function () &#123;&#125;);     //id代表由play获得的id，第二个参数是自己的回调哦</span><br></pre></td></tr></table></figure>
+<h2 id="暂停正在播放音频"><a href="#暂停正在播放音频" class="headerlink" title="暂停正在播放音频"></a>暂停正在播放音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.pause(id);      //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="暂停现在正在播放的所有音频"><a href="#暂停现在正在播放的所有音频" class="headerlink" title="暂停现在正在播放的所有音频"></a>暂停现在正在播放的所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.pauseAll();</span><br></pre></td></tr></table></figure>
+<h2 id="恢复播放指定的音频"><a href="#恢复播放指定的音频" class="headerlink" title="恢复播放指定的音频"></a>恢复播放指定的音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.resume(id);     //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="恢复播放所有之前暂停的所有音频"><a href="#恢复播放所有之前暂停的所有音频" class="headerlink" title="恢复播放所有之前暂停的所有音频"></a>恢复播放所有之前暂停的所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.resumeAll();</span><br></pre></td></tr></table></figure>
+<h2 id="停止播放指定音频"><a href="#停止播放指定音频" class="headerlink" title="停止播放指定音频"></a>停止播放指定音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.stop(id);     //id代表由play获得的id</span><br></pre></td></tr></table></figure>
+<h2 id="停止正在播放的所有音频"><a href="#停止正在播放的所有音频" class="headerlink" title="停止正在播放的所有音频"></a>停止正在播放的所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.stopAll();</span><br></pre></td></tr></table></figure>
+<h2 id="设置音频实例"><a href="#设置音频实例" class="headerlink" title="设置音频实例"></a>设置音频实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setMaxAudioInstance(num);      //num是一个音频设置几个实例</span><br></pre></td></tr></table></figure>
+<h2 id="获取一个音频可以设置几个实例"><a href="#获取一个音频可以设置几个实例" class="headerlink" title="获取一个音频可以设置几个实例"></a>获取一个音频可以设置几个实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.getMaxAudioInstance();</span><br></pre></td></tr></table></figure>
+<h2 id="预加载一个音频"><a href="#预加载一个音频" class="headerlink" title="预加载一个音频"></a>预加载一个音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.preload(path);     //path代表音频路径</span><br></pre></td></tr></table></figure>
+<h2 id="卸载预加载的音频"><a href="#卸载预加载的音频" class="headerlink" title="卸载预加载的音频"></a>卸载预加载的音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.uncache(path);     //path代表音频路径</span><br></pre></td></tr></table></figure>
+<h2 id="卸载所有音频"><a href="#卸载所有音频" class="headerlink" title="卸载所有音频"></a>卸载所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.uncacheAll();</span><br></pre></td></tr></table></figure>
+<h2 id="设置尺寸"><a href="#设置尺寸" class="headerlink" title="设置尺寸"></a>设置尺寸</h2><p>　　设置一个以 KB 为单位的尺寸，大于这个尺寸的音频在加载的时候会强制使用 dom 方式加载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setMaxWebAudioSize(size);      //size为要设置的尺寸</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -372,13 +344,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/">first：搭建一个自己域名的博客（hexo+github）</a></p>
+        <p><span>本文标题:</span><a  href="/2018/05/16/无标题markdown/">cocos creator 强大的audioEngine API</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 zhengliang 的个人博客">zhengliang</a></p>
-        <p><span>发布时间:</span>2018年05月06日 - 11时31分</p>
-        <p><span>最后更新:</span>2018年05月07日 - 00时36分</p>
+        <p><span>发布时间:</span>2018年05月16日 - 23时16分</p>
+        <p><span>最后更新:</span>2018年05月16日 - 23时11分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/" title="first：搭建一个自己域名的博客（hexo+github）">http://zhengliang1214.top/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhengliang1214.top/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/　　作者: zhengliang" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/05/16/无标题markdown/" title="cocos creator 强大的audioEngine API">http://zhengliang1214.top/2018/05/16/无标题markdown/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhengliang1214.top/2018/05/16/无标题markdown/　　作者: zhengliang" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -389,18 +361,9 @@
 
 <nav id="article-nav">
   
-    <a  href="/2018/05/14/游戏框架概念/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          游戏框架概念
-        
-      </div>
-    </a>
   
-  
-    <a  href="/2018/05/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a  href="/2018/05/16/cocos creator 强大的audioEngine API/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">cocos creator 强大的audioEngine API</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -412,7 +375,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#域名问题"><span class="toc-number">1.</span> <span class="toc-text">域名问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#域名购买"><span class="toc-number">1.1.</span> <span class="toc-text">域名购买</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#控制台设置"><span class="toc-number">1.2.</span> <span class="toc-text">控制台设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub操作"><span class="toc-number">2.</span> <span class="toc-text">GitHub操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册"><span class="toc-number">2.1.</span> <span class="toc-text">注册</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建仓库"><span class="toc-number">2.2.</span> <span class="toc-text">创建仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-Bash"><span class="toc-number">3.</span> <span class="toc-text">Git Bash</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">　　</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NodeJs"><span class="toc-number">5.</span> <span class="toc-text">NodeJs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo"><span class="toc-number">6.</span> <span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件夹"><span class="toc-number">6.1.</span> <span class="toc-text">文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">6.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化"><span class="toc-number">6.3.</span> <span class="toc-text">初始化</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#播放音频"><span class="toc-number">1.</span> <span class="toc-text">播放音频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置音频是否循环"><span class="toc-number">2.</span> <span class="toc-text">设置音频是否循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取音频的循环状态"><span class="toc-number">3.</span> <span class="toc-text">获取音频的循环状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置音量（0-0-1-0）"><span class="toc-number">4.</span> <span class="toc-text">设置音量（0.0 ~ 1.0）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取音量（0-0-1-0）"><span class="toc-number">5.</span> <span class="toc-text">获取音量（0.0 ~ 1.0）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置当前的音频时间"><span class="toc-number">6.</span> <span class="toc-text">设置当前的音频时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取当前的音频播放时间"><span class="toc-number">7.</span> <span class="toc-text">获取当前的音频播放时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取音频总时长"><span class="toc-number">8.</span> <span class="toc-text">获取音频总时长</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取音频状态"><span class="toc-number">9.</span> <span class="toc-text">获取音频状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置一个音频结束后的回调"><span class="toc-number">10.</span> <span class="toc-text">设置一个音频结束后的回调</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#暂停正在播放音频"><span class="toc-number">11.</span> <span class="toc-text">暂停正在播放音频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#暂停现在正在播放的所有音频"><span class="toc-number">12.</span> <span class="toc-text">暂停现在正在播放的所有音频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#恢复播放指定的音频"><span class="toc-number">13.</span> <span class="toc-text">恢复播放指定的音频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#恢复播放所有之前暂停的所有音频"><span class="toc-number">14.</span> <span class="toc-text">恢复播放所有之前暂停的所有音频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#停止播放指定音频"><span class="toc-number">15.</span> <span class="toc-text">停止播放指定音频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#停止正在播放的所有音频"><span class="toc-number">16.</span> <span class="toc-text">停止正在播放的所有音频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置音频实例"><span class="toc-number">17.</span> <span class="toc-text">设置音频实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取一个音频可以设置几个实例"><span class="toc-number">18.</span> <span class="toc-text">获取一个音频可以设置几个实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预加载一个音频"><span class="toc-number">19.</span> <span class="toc-text">预加载一个音频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卸载预加载的音频"><span class="toc-number">20.</span> <span class="toc-text">卸载预加载的音频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卸载所有音频"><span class="toc-number">21.</span> <span class="toc-text">卸载所有音频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置尺寸"><span class="toc-number">22.</span> <span class="toc-text">设置尺寸</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -485,13 +448,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2018/05/14/游戏框架概念/" title="上一篇: 游戏框架概念">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2018/05/05/hello-world/" title="下一篇: Hello World">
+            <a  href="/2018/05/16/cocos creator 强大的audioEngine API/" title="下一篇: cocos creator 强大的audioEngine API">
                 <i class="fa fa-angle-right"></i>
             </a>
         
