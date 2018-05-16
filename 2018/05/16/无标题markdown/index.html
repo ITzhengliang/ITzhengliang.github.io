@@ -9,17 +9,17 @@
   
   <title>cocos creator 强大的audioEngine API | 唯一的信仰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档） 播放音频1var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0  设置音频是否循环　1cc.audio">
+  <meta name="description" content="简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档） 播放音频1var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0  设置音频是否循环1cc.audioE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cocos creator 强大的audioEngine API">
 <meta property="og:url" content="http://zhengliang1214.top/2018/05/16/无标题markdown/index.html">
 <meta property="og:site_name" content="唯一的信仰">
-<meta property="og:description" content="简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档） 播放音频1var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0  设置音频是否循环　1cc.audio">
+<meta property="og:description" content="简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档） 播放音频1var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0  设置音频是否循环1cc.audioE">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-16T15:19:33.642Z">
+<meta property="og:updated_time" content="2018-05-16T15:23:29.731Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cocos creator 强大的audioEngine API">
-<meta name="twitter:description" content="简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档） 播放音频1var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0  设置音频是否循环　1cc.audio">
+<meta name="twitter:description" content="简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档） 播放音频1var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0  设置音频是否循环1cc.audioE">
   
     <link rel="alternative" href="/atom.xml" title="唯一的信仰" type="application/atom+xml">
   
@@ -315,11 +315,11 @@
         <p>　　简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档）</p>
 <h2 id="播放音频"><a href="#播放音频" class="headerlink" title="播放音频"></a>播放音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="设置音频是否循环"><a href="#设置音频是否循环" class="headerlink" title="设置音频是否循环"></a>设置音频是否循环</h2><p>　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setLoop(id, loop);   //id代表由play获得的id，loop代表是否循环,</span><br></pre></td></tr></table></figure></p>
+<h2 id="设置音频是否循环"><a href="#设置音频是否循环" class="headerlink" title="设置音频是否循环"></a>设置音频是否循环</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setLoop(id, loop);   //id代表由play获得的id，loop代表是否循环,</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="获取音频的循环状态"><a href="#获取音频的循环状态" class="headerlink" title="获取音频的循环状态"></a>获取音频的循环状态</h2><p>　　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.isLoop(id);   //id代表由play获得的id</span><br></pre></td></tr></table></figure></p>
+<h2 id="获取音频的循环状态"><a href="#获取音频的循环状态" class="headerlink" title="获取音频的循环状态"></a>获取音频的循环状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.isLoop(id);   //id代表由play获得的id</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="设置音量（0-0-1-0）"><a href="#设置音量（0-0-1-0）" class="headerlink" title="设置音量（0.0 ~ 1.0）"></a>设置音量（0.0 ~ 1.0）</h2><p>　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setVolume(id, volume);   //id代表由play获得的id, volume代表音量范围0~1.0</span><br></pre></td></tr></table></figure></p>
+<h2 id="设置音量（0-0-1-0）"><a href="#设置音量（0-0-1-0）" class="headerlink" title="设置音量（0.0 ~ 1.0）"></a>设置音量（0.0 ~ 1.0）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setVolume(id, volume);   //id代表由play获得的id, volume代表音量范围0~1.0</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="获取音量（0-0-1-0）"><a href="#获取音量（0-0-1-0）" class="headerlink" title="获取音量（0.0 ~ 1.0）"></a>获取音量（0.0 ~ 1.0）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var volume = cc.audioEngine.getVolume(id);    //id代表由play获得的id</span><br></pre></td></tr></table></figure>
 <hr>
@@ -368,7 +368,7 @@
         <p><span>本文标题:</span><a  href="/2018/05/16/无标题markdown/">cocos creator 强大的audioEngine API</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 zhengliang 的个人博客">zhengliang</a></p>
         <p><span>发布时间:</span>2018年05月16日 - 23时16分</p>
-        <p><span>最后更新:</span>2018年05月16日 - 23时19分</p>
+        <p><span>最后更新:</span>2018年05月16日 - 23时23分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/05/16/无标题markdown/" title="cocos creator 强大的audioEngine API">http://zhengliang1214.top/2018/05/16/无标题markdown/</a>
             <span class="copy-path" data-clipboard-text="原文: http://zhengliang1214.top/2018/05/16/无标题markdown/　　作者: zhengliang" title=""></span>
