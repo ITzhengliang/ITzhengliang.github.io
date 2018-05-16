@@ -309,9 +309,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="坑一"><a href="#坑一" class="headerlink" title="坑一"></a>坑一</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>　　YAMLException: end of the stream or a document separator is expected at line something, column something:</p>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>　　少了空格的问题。查看自己写的博客哪里是不是少了个空格。</p>
-
+              <p>　　记录自己在过程中遇到的各种坑，持续更新中。<br>
+          
       
     </div>
     
@@ -320,6 +319,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a   href="/2018/05/16/踩过的坑（持续更新）/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -368,13 +371,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>　　hexo搭建博客成功后，自己也写了几篇同时上传，一切正常。今天有软件更新，顺手更新了下。  </p>
-<h3 id="问题"><a href="#问题" class="headerlink" title="　问题　"></a>　问题　</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>命令也执行成功，但是 localhost:4000网址打不开，最终发现是4000端口被占用，主要是更新了福晰阅读器，占用了4000端口  </p>
-<h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><p>　　使用下面命令改变端口号，再打开localhost:5555</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s -p 5555</span><br></pre></td></tr></table></figure>
-<p>问题解决</p>
-
+              <p>　　hexo搭建博客成功后，自己也写了几篇同时上传，一切正常。今天有软件更新，顺手更新了下。<br>
+          
       
     </div>
     
@@ -383,6 +381,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a   href="/2018/05/16/localhost 4000不能访问/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -431,52 +433,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>　　简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档）</p>
-<h2 id="播放音频"><a href="#播放音频" class="headerlink" title="播放音频"></a>播放音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var id = cc.audioEngine.play(path, loop, volume );  //参数path代表音频路径，loop代表是否循环, volume代表音量范围0~1.0</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="设置音频是否循环"><a href="#设置音频是否循环" class="headerlink" title="设置音频是否循环"></a>设置音频是否循环</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setLoop(id, loop);   //id代表由play获得的id，loop代表是否循环,</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="获取音频的循环状态"><a href="#获取音频的循环状态" class="headerlink" title="获取音频的循环状态"></a>获取音频的循环状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.isLoop(id);   //id代表由play获得的id</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="设置音量（0-0-1-0）"><a href="#设置音量（0-0-1-0）" class="headerlink" title="设置音量（0.0 ~ 1.0）"></a>设置音量（0.0 ~ 1.0）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setVolume(id, volume);   //id代表由play获得的id, volume代表音量范围0~1.0</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="获取音量（0-0-1-0）"><a href="#获取音量（0-0-1-0）" class="headerlink" title="获取音量（0.0 ~ 1.0）"></a>获取音量（0.0 ~ 1.0）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var volume = cc.audioEngine.getVolume(id);    //id代表由play获得的id</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="设置当前的音频时间"><a href="#设置当前的音频时间" class="headerlink" title="设置当前的音频时间"></a>设置当前的音频时间</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setCurrentTime(id, time);    //id代表由play获得的id，time代表播放的当前位置（单位为秒）</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="获取当前的音频播放时间"><a href="#获取当前的音频播放时间" class="headerlink" title="获取当前的音频播放时间"></a>获取当前的音频播放时间</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var time = cc.audioEngine.getCurrentTime(id);   //id代表由play获得的id</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="获取音频总时长"><a href="#获取音频总时长" class="headerlink" title="获取音频总时长"></a>获取音频总时长</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var time = cc.audioEngine.getDuration(id);    //id代表由play获得的id</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="获取音频状态"><a href="#获取音频状态" class="headerlink" title="获取音频状态"></a>获取音频状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var state = cc.audioEngine.getState(id);      //id代表由play获得的id</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="设置一个音频结束后的回调"><a href="#设置一个音频结束后的回调" class="headerlink" title="设置一个音频结束后的回调"></a>设置一个音频结束后的回调</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setFinishCallback(id, function () &#123;&#125;);     //id代表由play获得的id，第二个参数是自己的回调哦</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="暂停正在播放音频"><a href="#暂停正在播放音频" class="headerlink" title="暂停正在播放音频"></a>暂停正在播放音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.pause(id);      //id代表由play获得的id</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="暂停现在正在播放的所有音频"><a href="#暂停现在正在播放的所有音频" class="headerlink" title="暂停现在正在播放的所有音频"></a>暂停现在正在播放的所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.pauseAll();</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="恢复播放指定的音频"><a href="#恢复播放指定的音频" class="headerlink" title="恢复播放指定的音频"></a>恢复播放指定的音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.resume(id);     //id代表由play获得的id</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="恢复播放所有之前暂停的所有音频"><a href="#恢复播放所有之前暂停的所有音频" class="headerlink" title="恢复播放所有之前暂停的所有音频"></a>恢复播放所有之前暂停的所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.resumeAll();</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="停止播放指定音频"><a href="#停止播放指定音频" class="headerlink" title="停止播放指定音频"></a>停止播放指定音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.stop(id);     //id代表由play获得的id</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="停止正在播放的所有音频"><a href="#停止正在播放的所有音频" class="headerlink" title="停止正在播放的所有音频"></a>停止正在播放的所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.stopAll();</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="设置音频实例"><a href="#设置音频实例" class="headerlink" title="设置音频实例"></a>设置音频实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setMaxAudioInstance(num);      //num是一个音频设置几个实例</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="获取一个音频可以设置几个实例"><a href="#获取一个音频可以设置几个实例" class="headerlink" title="获取一个音频可以设置几个实例"></a>获取一个音频可以设置几个实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.getMaxAudioInstance();</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="预加载一个音频"><a href="#预加载一个音频" class="headerlink" title="预加载一个音频"></a>预加载一个音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.preload(path);     //path代表音频路径</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="卸载预加载的音频"><a href="#卸载预加载的音频" class="headerlink" title="卸载预加载的音频"></a>卸载预加载的音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.uncache(path);     //path代表音频路径</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="卸载所有音频"><a href="#卸载所有音频" class="headerlink" title="卸载所有音频"></a>卸载所有音频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.uncacheAll();</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="设置尺寸"><a href="#设置尺寸" class="headerlink" title="设置尺寸"></a>设置尺寸</h2><p>　　设置一个以 KB 为单位的尺寸，大于这个尺寸的音频在加载的时候会强制使用 dom 方式加载</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cc.audioEngine.setMaxWebAudioSize(size);      //size为要设置的尺寸</span><br></pre></td></tr></table></figure>
-
+              <p>　　简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档）<br>
+          
       
     </div>
     
@@ -485,6 +443,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a   href="/2018/05/16/cocos creator 强大的audioEngine API/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -533,9 +495,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>　　cocos对于后台切入切出事件的捕捉和处理很方便。<br>　　cc.eventManager添加监听事件就ok了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cc.eventManager.addCustomListener(cc.game.EVENT_HIDE, function()&#123;  </span><br><span class="line">      </span><br><span class="line"> &#125;);  </span><br><span class="line">cc.eventManager.addCustomListener(cc.game.EVENT_SHOW, function()&#123;  </span><br><span class="line">    </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
+              <p>　　cocos对于后台切入切出事件的捕捉和处理很方便。<br>
+          
       
     </div>
     
@@ -544,6 +505,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a   href="/2018/05/16/cocos后台切入切出/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -592,21 +557,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>　　游戏中一个系统的搭建很重要，一个模块的创建是否成功，直接影响你后续维护和扩展的成本。<br>　　要有模块化思想，考虑耦合度，使用方便与否，扩展方便与否，用户体验怎么样。</p>
-<h3 id="资源模块"><a href="#资源模块" class="headerlink" title="资源模块"></a>资源模块</h3><p>　　一个系统首先要有资源，资源分为UI和模型。</p>
-<hr>
-<h3 id="管理资源模块（Facade）"><a href="#管理资源模块（Facade）" class="headerlink" title="管理资源模块（Facade）"></a>管理资源模块（Facade）</h3><p>　　用于处理资源。<br>　　资源的加载模块(ObjManager)。<br>　　创建资源模块(ResourceManager)。</p>
-<hr>
-<h3 id="游戏的逻辑模块"><a href="#游戏的逻辑模块" class="headerlink" title="游戏的逻辑模块"></a>游戏的逻辑模块</h3><p>　　游戏入口逻辑（GameManager）。</p>
-<hr>
-<h3 id="UI逻辑模块"><a href="#UI逻辑模块" class="headerlink" title="UI逻辑模块"></a>UI逻辑模块</h3><p>　　主要控制UI的逻辑（UIManager）。panel直接的相互切换。</p>
-<hr>
-<h3 id="通用类"><a href="#通用类" class="headerlink" title="通用类"></a>通用类</h3><p>　　会有通用的类，比如加载路径等（Util）。</p>
-<hr>
-<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>　　常量，比如扩展名，网址等（AppConst）。</p>
-<hr>
-<h3 id="Packager"><a href="#Packager" class="headerlink" title="Packager"></a>Packager</h3><p>　　一个小的工具，打包资源用。unity5以上写起来比较方便。</p>
-
+              <p>　　游戏中一个系统的搭建很重要，一个模块的创建是否成功，直接影响你后续维护和扩展的成本。<br>　　要有模块化思想，考虑耦合度，使用方便与否，扩展方便与否，用户体验怎么样。<br>
+          
       
     </div>
     
@@ -615,6 +567,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a   href="/2018/05/14/游戏框架概念/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -663,42 +619,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>–我的流程，仅供参考</p>
-<h2 id="域名问题"><a href="#域名问题" class="headerlink" title="域名问题"></a>域名问题</h2><h3 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h3><p>　　我是在<a href="https://wanwang.aliyun.com/?spm=5176.8142029.735711.62.7e336d3eExsYn8" target="_blank" rel="noopener">阿里云</a>上购买的域名，搜自己喜欢，且后续成本相对划算的</p>
-<h3 id="控制台设置"><a href="#控制台设置" class="headerlink" title="控制台设置"></a>控制台设置</h3><p><img src="https://note.youdao.com/yws/api/personal/file/E5A9659275804404B93025F6756AA789?method=download&amp;shareKey=277529ae0a30e170be73d0a0a34b7d3f" alt="image"><br>　　12步无所谓先后，实名认证什么的先不搞不影响购买，购买的时候会提醒你创建。  </p>
-<p>　　创建购买好后，控制台各种资料，实名认证一搞。控制台左边选择域名，就可以看见你买的域名了。<br><img src="https://note.youdao.com/yws/api/personal/file/CC0C6DC082EE414EA94C70E64944F9F0?method=download&amp;shareKey=fa76ffad63898e0fc9b02bc37c1af868" alt="image">  </p>
-<hr>
-<h2 id="GitHub操作"><a href="#GitHub操作" class="headerlink" title="GitHub操作"></a>GitHub操作</h2><h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><p>　　在<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>注册一个自己的账号<br><img src="https://note.youdao.com/yws/api/personal/file/B2812AE35BFB479FA08A1D303949D6AD?method=download&amp;shareKey=a98326f52ca243cf3f9df0971d5e29b9" alt="image"></p>
-<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>　　注意：如果你的用户名是yourname，那repository name就要填yourname.github.io。<br><img src="https://note.youdao.com/yws/api/personal/file/EEAC1CF60E894BEEA1BA8E90D7B8040A?method=download&amp;shareKey=7fcd2d440736eb2b6ba4b9b3db2e3228" alt="image"><br>　　这里就是刚建好的仓库<br><img src="https://note.youdao.com/yws/api/personal/file/DE5F5FF794B345BBBC5E6E9C04D7DF66?method=download&amp;shareKey=cbeaba844029ba22d9cf985ee1a3c96f" alt="image"></p>
-<hr>
-<h2 id="Git-Bash"><a href="#Git-Bash" class="headerlink" title="Git Bash"></a>Git Bash</h2><p>　　安装<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git Bash</a>，一路next安装完。</p>
-<h2 id=""><a href="#" class="headerlink" title="　　"></a>　　</h2><h2 id="NodeJs"><a href="#NodeJs" class="headerlink" title="NodeJs"></a>NodeJs</h2><p>　　安装<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">NodeJs</a>，因为我是用的Hexo博客框架，基于NodeJs环境的静态博客，很多npm工具可以用。<br>　　一路安装，在Custom Setup这步选择 add to path，省的自己再去配环境变量。　　<br>　　Win+r 输入cmd<br><img src="https://note.youdao.com/yws/api/personal/file/C43F65396E5741918AEA2CC423B53135?method=download&amp;shareKey=43b535a0faed29107cd474755c14e704" alt="image"><br>　　输入node按回车，这种情况说明OK了<br><img src="https://note.youdao.com/yws/api/personal/file/0ADA0CF9A066494589F899AE897BDB09?method=download&amp;shareKey=12d8907ebe38a1e89080a20986fefc82" alt="image"></p>
-<hr>
-<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="文件夹"><a href="#文件夹" class="headerlink" title="文件夹"></a>文件夹</h3><p>　　先新建一个文件夹，以后存放所有博客的东西。  </p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>　　打开git bash，cd进入到刚新建的文件夹下<br><img src="https://note.youdao.com/yws/api/personal/file/35448E06883F4F668014DADAE7AEBEA9?method=download&amp;shareKey=8666d73cd7cee81f725375c924c3ae31" alt="image"><br>　　输入命令安装hexo。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g hexo</span><br></pre></td></tr></table></figure>
-<p>　　这里提示一个坑点，这种情况是nodejs问题，我把nodejs卸载后重新安装了一下nodejs，然后重新安装hexo。<br><img src="https://note.youdao.com/yws/api/personal/file/32485E84D8114C08AA695717B5AAF6DA?method=download&amp;shareKey=b3798d14378d9c0db1b41a64b4960baa" alt="image"><br><img src="https://note.youdao.com/yws/api/personal/file/C198365A47604803A770738C48DD0223?method=download&amp;shareKey=b1e7a0d470f60ed082446d8467575e80" alt="image"><br>　　输入命令查看，出现这就安装成功了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://note.youdao.com/yws/api/personal/file/DB89895C5A774373BF7A1EBF7ED9BD22?method=download&amp;shareKey=d80b971cccc0b0fbb7aff7916cfaf083" alt="image"></p>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>　　输入命令进行初始化</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p><img src="https://note.youdao.com/yws/api/personal/file/12879EFB0C6E46468D267ADA1FF8FBE8?method=download&amp;shareKey=50bd24b820efce8fb1d76c09d4c3629f" alt="image"><br>　　初始化完成后，刚新建的文件夹里会出现很多文件。<br><img src="https://note.youdao.com/yws/api/personal/file/098AA5CCB2704DDD8518959421022D78?method=download&amp;shareKey=7b391036ecc6ec7e47e0c25a5fe56ceb" alt="image"><br>　　这里解释一下：</p>
-<ul>
-<li>　　onode_modules：是依赖包</li>
-<li>　　opublic：存放的是生成的页面</li>
-<li>　　oscaffolds：命令生成文章等的模板</li>
-<li>　　osource：用命令创建的各种文章</li>
-<li>　　othemes：主题</li>
-<li>　　o_config.yml：整个博客的配置</li>
-<li>　　odb.json：source解析所得到的</li>
-<li>　　opackage.json：项目所需模块项目的配置信息<br>　　然后在同样命令行中输入命令生成静态页面</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<p><img src="https://note.youdao.com/yws/api/personal/file/22614B6055324AE9940928EA94970958?method=download&amp;shareKey=6e6f657eecc70a3ffd264d0545b9c6c0" alt="image"><br>　　再输入命令开启web服务<br>　　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://note.youdao.com/yws/api/personal/file/1900FDB9EED347E7A5FDC0211EDAC30B?method=download&amp;shareKey=c113c83e3e3d82220c80aa0dabbc43e9" alt="image"><br>　　然后打开<a href="http://localhost:4000/，就可以看到刚生成的页面了。" target="_blank" rel="noopener">http://localhost:4000/，就可以看到刚生成的页面了。</a><br><img src="https://note.youdao.com/yws/api/personal/file/58B25737090C4689BDBEFE714CF8E69A?method=download&amp;shareKey=7d1efb595f6355ea62dba978ca6544dc" alt="image"></p>
-
+              <p>–我的流程，仅供参考<br>
+          
       
     </div>
     
@@ -707,6 +629,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a   href="/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
