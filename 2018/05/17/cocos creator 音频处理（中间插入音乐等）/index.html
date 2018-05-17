@@ -17,7 +17,7 @@
 <meta property="og:description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/A0FCC1677449497F897054722DB73C33?method=download&shareKey=443bf279acf7ac7c32b095c74fcb3d0f">
-<meta property="og:updated_time" content="2018-05-17T12:54:17.129Z">
+<meta property="og:updated_time" content="2018-05-17T12:55:56.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）">
 <meta name="twitter:description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。">
@@ -359,7 +359,7 @@
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">changEpoch: function (epochId) &#123;</span><br><span class="line">    this.bgmTable = jsonTables.getEpochBgm(epochId);</span><br><span class="line">    var lastBgmIdTmp = this.lastBgmId</span><br><span class="line">    var lastVolume = 1;</span><br><span class="line">    var curVolume = 0;</span><br><span class="line">    this.lastBgmId = null;</span><br><span class="line">    this.bgmIndex = 1;</span><br><span class="line"></span><br><span class="line">    this.schedule(function () &#123;</span><br><span class="line">        var lastBgmState = cc.audioEngine.getState(lastBgmIdTmp);</span><br><span class="line">        var curBgmState = cc.audioEngine.getState(this.lastBgmId);</span><br><span class="line">        if (lastBgmState &amp;&amp; lastVolume &gt;= 0) &#123;</span><br><span class="line">            lastVolume -= 0.2;</span><br><span class="line">            cc.audioEngine.setVolume(lastBgmIdTmp, lastVolume);</span><br><span class="line">        &#125;</span><br><span class="line">        if(curBgmState &amp;&amp; curVolume &lt;= 1)&#123;</span><br><span class="line">            curVolume += 0.2;</span><br><span class="line">            cc.audioEngine.setVolume(this.lastBgmId, curVolume);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, 1, 5, 0.1)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="audioEngine-API"><a href="#audioEngine-API" class="headerlink" title="audioEngine API"></a>audioEngine API</h2><p>　　最后发现creator audioEngine提供了所需要的基本的API。<br>　　<a href="http://zhengliang1214.top/2018/05/16/cocos%20creator%20%E5%BC%BA%E5%A4%A7%E7%9A%84audioEngine%20API/#more">http://zhengliang1214.top/2018/05/16/cocos%20creator%20%E5%BC%BA%E5%A4%A7%E7%9A%84audioEngine%20API/#more</a>
+<h2 id="audioEngine-API"><a href="#audioEngine-API" class="headerlink" title="audioEngine API"></a>audioEngine API</h2><p>　　最后发现creator audioEngine提供了所需要的基本的API。<br>　　<a href="http://zhengliang1214.top/2018/05/16/cocos%20creator%20%E5%BC%BA%E5%A4%A7%E7%9A%84audioEngine%20API/#more">点击查看audioEngine API</a>
 　　</p>
 
       
@@ -372,7 +372,7 @@
         <p><span>本文标题:</span><a  href="/2018/05/17/cocos creator 音频处理（中间插入音乐等）/">cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 zhengliang 的个人博客">zhengliang</a></p>
         <p><span>发布时间:</span>2018年05月17日 - 20时49分</p>
-        <p><span>最后更新:</span>2018年05月17日 - 20时54分</p>
+        <p><span>最后更新:</span>2018年05月17日 - 20时55分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/05/17/cocos creator 音频处理（中间插入音乐等）/" title="cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）">http://zhengliang1214.top/2018/05/17/cocos creator 音频处理（中间插入音乐等）/</a>
             <span class="copy-path" data-clipboard-text="原文: http://zhengliang1214.top/2018/05/17/cocos creator 音频处理（中间插入音乐等）/　　作者: zhengliang" title=""></span>
