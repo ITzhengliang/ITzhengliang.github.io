@@ -7,18 +7,21 @@
   
   
   
-  <title>唯一的信仰</title>
+  <title>cocos creator 游戏背景音乐处理（音乐循环淡入淡出等） | 唯一的信仰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="是Hello word沉沦了我的信仰，还是我的信仰成就了Hello word">
-<meta property="og:type" content="website">
-<meta property="og:title" content="唯一的信仰">
-<meta property="og:url" content="http://zhengliang1214.top/index.html">
+  <meta name="description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。 需求 在同一场景音乐处理　　一般同一场景是同一首背景音乐。　　现需求在同一场景（时代）内播放不同的音乐，在音乐配表中，同一场景加入新的音乐，每个音乐都带有一个cd字段，这个字段代表这首音乐播放剩余cd秒时，播放下一首音乐。相应的音乐资源会做淡入淡出处理。　　解决：做一个一直存在的定时器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）">
+<meta property="og:url" content="http://zhengliang1214.top/2018/05/17/cocos creator 音频处理（中间插入音乐等）/index.html">
 <meta property="og:site_name" content="唯一的信仰">
-<meta property="og:description" content="是Hello word沉沦了我的信仰，还是我的信仰成就了Hello word">
+<meta property="og:description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。 需求 在同一场景音乐处理　　一般同一场景是同一首背景音乐。　　现需求在同一场景（时代）内播放不同的音乐，在音乐配表中，同一场景加入新的音乐，每个音乐都带有一个cd字段，这个字段代表这首音乐播放剩余cd秒时，播放下一首音乐。相应的音乐资源会做淡入淡出处理。　　解决：做一个一直存在的定时器">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/A0FCC1677449497F897054722DB73C33?method=download&shareKey=443bf279acf7ac7c32b095c74fcb3d0f">
+<meta property="og:updated_time" content="2018-05-17T12:49:14.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="唯一的信仰">
-<meta name="twitter:description" content="是Hello word沉沦了我的信仰，还是我的信仰成就了Hello word">
+<meta name="twitter:title" content="cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）">
+<meta name="twitter:description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。 需求 在同一场景音乐处理　　一般同一场景是同一首背景音乐。　　现需求在同一场景（时代）内播放不同的音乐，在音乐配表中，同一场景加入新的音乐，每个音乐都带有一个cd字段，这个字段代表这首音乐播放剩余cd秒时，播放下一首音乐。相应的音乐资源会做淡入淡出处理。　　解决：做一个一直存在的定时器">
+<meta name="twitter:image" content="https://note.youdao.com/yws/api/personal/file/A0FCC1677449497F897054722DB73C33?method=download&shareKey=443bf279acf7ac7c32b095c74fcb3d0f">
   
     <link rel="alternative" href="/atom.xml" title="唯一的信仰" type="application/atom+xml">
   
@@ -32,9 +35,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -45,8 +45,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -278,9 +278,7 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-cocos creator 音频处理（中间插入音乐等）" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-cocos creator 音频处理（中间插入音乐等）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a  href="/2018/05/17/cocos creator 音频处理（中间插入音乐等）/" class="article-date">
@@ -297,13 +295,20 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/05/17/cocos creator 音频处理（中间插入音乐等）/">cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）</a>
+    <h1 class="article-title" itemprop="name">
+      cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）
     </h1>
   
 
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -360,465 +365,153 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-踩过的坑（持续更新）" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/05/16/踩过的坑（持续更新）/" class="article-date">
-      <time datetime="2018-05-16T15:56:34.510Z" itemprop="datePublished">2018-05-16</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/05/16/踩过的坑（持续更新）/">踩过的坑（持续更新）</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>　　记录自己在过程中遇到的各种坑，持续更新中。<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a   href="/2018/05/16/踩过的坑（持续更新）/#more">查看更多 >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2018/05/17/cocos creator 音频处理（中间插入音乐等）/">cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 zhengliang 的个人博客">zhengliang</a></p>
+        <p><span>发布时间:</span>2018年05月17日 - 20时49分</p>
+        <p><span>最后更新:</span>2018年05月17日 - 20时49分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/05/17/cocos creator 音频处理（中间插入音乐等）/" title="cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）">http://zhengliang1214.top/2018/05/17/cocos creator 音频处理（中间插入音乐等）/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhengliang1214.top/2018/05/17/cocos creator 音频处理（中间插入音乐等）/　　作者: zhengliang" title=""></span>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-localhost 4000不能访问" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/05/16/localhost 4000不能访问/" class="article-date">
-      <time datetime="2018-05-16T15:47:50.085Z" itemprop="datePublished">2018-05-16</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/05/16/localhost 4000不能访问/">localhost:4000不能访问</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>　　hexo搭建博客成功后，自己也写了几篇同时上传，一切正常。今天有软件更新，顺手更新了下。<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a   href="/2018/05/16/localhost 4000不能访问/#more">查看更多 >></a>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2018/05/16/踩过的坑（持续更新）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">踩过的坑（持续更新）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#需求"><span class="toc-number">1.</span> <span class="toc-text">需求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在同一场景音乐处理"><span class="toc-number">1.1.</span> <span class="toc-text">在同一场景音乐处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在场景切换时音乐处理"><span class="toc-number">1.2.</span> <span class="toc-text">在场景切换时音乐处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">　　</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取表数据整理结构"><span class="toc-number">2.1.</span> <span class="toc-text">获取表数据整理结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单个场景内循环播放音乐"><span class="toc-number">2.2.</span> <span class="toc-text">单个场景内循环播放音乐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#场景切换时音乐更新"><span class="toc-number">2.3.</span> <span class="toc-text">场景切换时音乐更新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#audioEngine-API"><span class="toc-number">3.</span> <span class="toc-text">audioEngine API</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
 
-
-
-  
-    <article id="post-cocos creator 强大的audioEngine API" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/05/16/cocos creator 强大的audioEngine API/" class="article-date">
-      <time datetime="2018-05-16T15:16:29.619Z" itemprop="datePublished">2018-05-16</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
     
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/05/16/cocos creator 强大的audioEngine API/">cocos creator 强大的audioEngine API</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>　　简直了，感觉自己还是知道的太少，在过程中最后发现creator audioEngine提供了所需要的基本的API。这个感觉还是蛮重要的。（摘自官方文档）<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a   href="/2018/05/16/cocos creator 强大的audioEngine API/#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-cocos后台切入切出" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/05/16/cocos后台切入切出/" class="article-date">
-      <time datetime="2018-05-16T14:48:19.839Z" itemprop="datePublished">2018-05-16</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/05/16/cocos后台切入切出/">cocos creator后台切入切出</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>　　cocos对于后台切入切出事件的捕捉和处理很方便。<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a   href="/2018/05/16/cocos后台切入切出/#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-游戏框架概念" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/05/14/游戏框架概念/" class="article-date">
-      <time datetime="2018-05-14T14:51:01.572Z" itemprop="datePublished">2018-05-14</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/05/14/游戏框架概念/">游戏框架概念</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>　　游戏中一个系统的搭建很重要，一个模块的创建是否成功，直接影响你后续维护和扩展的成本。<br>　　要有模块化思想，考虑耦合度，使用方便与否，扩展方便与否，用户体验怎么样。<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a   href="/2018/05/14/游戏框架概念/#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-first：搭建一个自己域名的博客（hexo+github）" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/" class="article-date">
-      <time datetime="2018-05-06T03:31:16.358Z" itemprop="datePublished">2018-05-06</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a  href="/2018/05/16/踩过的坑（持续更新）/" title="下一篇: 踩过的坑（持续更新）">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/">first：搭建一个自己域名的博客（hexo+github）</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>–我的流程，仅供参考<br>
-          
-      
     </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/05/17/cocos creator 音频处理（中间插入音乐等）/">cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/16/踩过的坑（持续更新）/">踩过的坑（持续更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/16/localhost 4000不能访问/">localhost:4000不能访问</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/16/cocos creator 强大的audioEngine API/">cocos creator 强大的audioEngine API</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/16/cocos后台切入切出/">cocos creator后台切入切出</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/14/游戏框架概念/">游戏框架概念</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/">first：搭建一个自己域名的博客（hexo+github）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/05/hello-world/">Hello World</a></li></ul>
     
-    <div class="article-info article-info-index">
-      
-      
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
-      
-      
-        <p class="article-more-link">
-          <a   href="/2018/05/06/first：搭建一个自己域名的博客（hexo+github）/#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
 
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2018/05/05/hello-world/" class="article-date">
-      <time datetime="2018-05-05T05:46:22.889Z" itemprop="datePublished">2018-05-05</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <script>
         
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2018/05/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a   href="/2018/05/05/hello-world/#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-  
+    </script>
 
 </div>
       <footer id="footer">
