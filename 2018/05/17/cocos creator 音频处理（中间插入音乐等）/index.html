@@ -9,18 +9,18 @@
   
   <title>cocos creator 游戏背景音乐处理（音乐循环淡入淡出等） | 唯一的信仰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。 需求 在同一场景音乐处理　　一般同一场景是同一首背景音乐。　　现需求在同一场景（时代）内播放不同的音乐，在音乐配表中，同一场景加入新的音乐，每个音乐都带有一个cd字段，这个字段代表这首音乐播放剩余cd秒时，播放下一首音乐。相应的音乐资源会做淡入淡出处理。　　解决：做一个一直存在的定时器">
+  <meta name="description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）">
 <meta property="og:url" content="http://zhengliang1214.top/2018/05/17/cocos creator 音频处理（中间插入音乐等）/index.html">
 <meta property="og:site_name" content="唯一的信仰">
-<meta property="og:description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。 需求 在同一场景音乐处理　　一般同一场景是同一首背景音乐。　　现需求在同一场景（时代）内播放不同的音乐，在音乐配表中，同一场景加入新的音乐，每个音乐都带有一个cd字段，这个字段代表这首音乐播放剩余cd秒时，播放下一首音乐。相应的音乐资源会做淡入淡出处理。　　解决：做一个一直存在的定时器">
+<meta property="og:description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/A0FCC1677449497F897054722DB73C33?method=download&shareKey=443bf279acf7ac7c32b095c74fcb3d0f">
-<meta property="og:updated_time" content="2018-05-17T12:49:14.680Z">
+<meta property="og:updated_time" content="2018-05-17T12:54:17.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）">
-<meta name="twitter:description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。 需求 在同一场景音乐处理　　一般同一场景是同一首背景音乐。　　现需求在同一场景（时代）内播放不同的音乐，在音乐配表中，同一场景加入新的音乐，每个音乐都带有一个cd字段，这个字段代表这首音乐播放剩余cd秒时，播放下一首音乐。相应的音乐资源会做淡入淡出处理。　　解决：做一个一直存在的定时器">
+<meta name="twitter:description" content="在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。">
 <meta name="twitter:image" content="https://note.youdao.com/yws/api/personal/file/A0FCC1677449497F897054722DB73C33?method=download&shareKey=443bf279acf7ac7c32b095c74fcb3d0f">
   
     <link rel="alternative" href="/atom.xml" title="唯一的信仰" type="application/atom+xml">
@@ -314,7 +314,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>　　在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。</p>
+        <p>　　在处理游戏背景音乐中遇到的问题，策划对于音乐播放提出新的想法。但由于目前周围没有人尝试过，所以自己摸索的来。<br><a id="more"></a></p>
 <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p><img src="https://note.youdao.com/yws/api/personal/file/A0FCC1677449497F897054722DB73C33?method=download&amp;shareKey=443bf279acf7ac7c32b095c74fcb3d0f" alt="image"></p>
 <h3 id="在同一场景音乐处理"><a href="#在同一场景音乐处理" class="headerlink" title="在同一场景音乐处理"></a>在同一场景音乐处理</h3><p>　　一般同一场景是同一首背景音乐。<br>　　现需求在同一场景（时代）内播放不同的音乐，在音乐配表中，同一场景加入新的音乐，每个音乐都带有一个cd字段，这个字段代表这首音乐播放剩余cd秒时，播放下一首音乐。相应的音乐资源会做淡入淡出处理。<br>　　解决：做一个一直存在的定时器，用一个变量curAudio存当前音乐的path，用一个变量lastAudio存上一首音乐的path，获取到音乐资源的时长，在定时器内检测是否到达cd时间段，如在play下一首，cd完stop上一首，同时curAudio存当前音乐。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">id = cc.audioEngine.play(audio, loop, volume);    //参数为：音乐，循环，音量</span><br><span class="line">curAudio = audio;</span><br></pre></td></tr></table></figure>
@@ -372,7 +372,7 @@
         <p><span>本文标题:</span><a  href="/2018/05/17/cocos creator 音频处理（中间插入音乐等）/">cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 zhengliang 的个人博客">zhengliang</a></p>
         <p><span>发布时间:</span>2018年05月17日 - 20时49分</p>
-        <p><span>最后更新:</span>2018年05月17日 - 20时49分</p>
+        <p><span>最后更新:</span>2018年05月17日 - 20时54分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/05/17/cocos creator 音频处理（中间插入音乐等）/" title="cocos creator 游戏背景音乐处理（音乐循环淡入淡出等）">http://zhengliang1214.top/2018/05/17/cocos creator 音频处理（中间插入音乐等）/</a>
             <span class="copy-path" data-clipboard-text="原文: http://zhengliang1214.top/2018/05/17/cocos creator 音频处理（中间插入音乐等）/　　作者: zhengliang" title=""></span>
